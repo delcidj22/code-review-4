@@ -1,13 +1,13 @@
 function Pizza(size, topping) {
-this.size = size 
-this.topping = topping
+this.size = size; 
+this.topping = topping;
 } 
 
 Pizza.prototype.totalCost = function() {
   let toppingPrice = 0;
   let sizePrice = 0; 
-  for(let i = 0; i <this.topping.length; i++) {
-    toppingPrice += 2;
+  for(let i = 0; i <this.topping.length; i++ ) {
+    toppingPrice += 1;
   };
 
   if(this.size === 'Small') {
@@ -21,15 +21,16 @@ Pizza.prototype.totalCost = function() {
 }
 
 $(document).ready(function() {
-  $("#pizza").submit(function(e) {
+  $("#pizza-order").submit(function(e) {
     e.preventDefault();
     const topping = $('input[name="topping"]:checked').map(function() {
       return $(this).val();
     }).get();
-    const size = $("size").val();
+    const size = $("#size").val();
     const total = new Pizza(topping, size);
-    const cost = (total.totalCost());
+    const price = (total.totalCost());
     $('#cost').html(price);
+
   });
 });
 

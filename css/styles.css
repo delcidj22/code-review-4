@@ -5,3 +5,7 @@ h1 {
 #orderComplete {
   display: none;
 }
+
+h5 {
+  font-weight: bold;
+}

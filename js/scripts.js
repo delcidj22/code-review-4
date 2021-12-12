@@ -20,7 +20,7 @@ Pizza.prototype.cost = function() {
     ["Pesto", 1.25],
   ]);
   this.topping.forEach(function(element) {
-    pizzaTotal = topping.get(element) 
+    pizzaTotal += topping.get(element) 
   });
   total = size.get(this.size) + pizzaTotal;
   return total;
@@ -30,6 +30,10 @@ Pizza.prototype.cost = function() {
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
-    
-  } 
-}
+    let size = $("input:radio[name=size]:checked").val(); 
+    let topping = $("input:radio[name=topping]:checked").val();
+    let pizzaCost = size + topping
+  });
+  pizzaCost = new Pizza("size", "topping");
+  $("#totalCost").text(pizzaCost.cost());
+});

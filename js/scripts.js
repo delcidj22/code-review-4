@@ -13,11 +13,23 @@ Pizza.prototype.cost = function() {
   const topping = new Map ([
     ["Pepperoni", 1.50],
     ["Ham", 1.50],
-    ["Pineapple", 1.00]
+    ["Pineapple", 1.00],
     ["Onion", 1.00],
     ["Olives", 1.00],
-    ["Mixed Peppers", 1.00]
+    ["Mixed Peppers", 1.00],
     ["Pesto", 1.25],
-  ])
+  ]);
+  this.topping.forEach(function(element) {
+    pizzaTotal = topping.get(element) 
+  });
+  total = size.get(this.size) + pizzaTotal;
+  return total;
+}
 
+
+$(document).ready(function() {
+  $("#pizza").submit(function(event) {
+    event.preventDefault();
+    
+  } 
 }

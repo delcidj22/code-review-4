@@ -7,14 +7,14 @@ Pizza.prototype.totalCost = function() {
   let toppingPrice = 0;
   let sizePrice = 0; 
   for(let i = 0; i <this.topping.length; i++ ) {
-    toppingPrice += 1;
+    toppingPrice++;
   };
 
-  if(this.size === 'Small') {
+  if(this.size === 'pizzaSize1') {
     sizePrice = 15.00;
-  } else if(this.size === 'Medium') {
+  } else if(this.size === 'pizzaSize2') {
     sizePrice = 19.00;
-  } else if(this.size === 'Large') {
+  } else if(this.size === 'pizzaSize3') {
     sizePrice = 22.00;
   }
   return toppingPrice + sizePrice;
@@ -30,6 +30,7 @@ $(document).ready(function() {
     const total = new Pizza(topping, size);
     const price = (total.totalCost());
     $('#cost').html(price);
+    $('#orderComplete').show();
 
   });
 });

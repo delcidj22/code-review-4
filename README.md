@@ -14,7 +14,7 @@
 
 _In this project, I make a site for my own pizza parlor, adding prices and toppings for the user_
 
-<p><a href="github.com/delcidj22/code-review-4">CLICK HERE</a> to look over this code review!</p>
+<p><a href="https://github.com/delcidj22/code-review-4">CLICK HERE</a> to look over this code review!</p>
 
 ## Setup/Installation Requirements
 

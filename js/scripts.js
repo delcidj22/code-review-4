@@ -37,7 +37,6 @@ $(document).ready(function() {
     const price = (total.totalCost());
     $('#cost').html(price);
     $('#orderComplete').show();
-    console.log(total)
   });
 });
 

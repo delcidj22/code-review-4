@@ -38,6 +38,6 @@ Code: (#cost)
 Expected Output: [26.00] 
 
 ## Known Bugs
-Not returning desired input, only returning $0
+
 
 Copyright (c) _December 2021, Jonathan Delcid_
